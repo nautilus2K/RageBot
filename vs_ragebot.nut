@@ -39,7 +39,7 @@
 							{
 								if (GetDistance(hPlayer, hEntity) < dist[client])
 								{
-									if (hPlayer.GetButtonMask() & IN_ATTACK || hPlayer.GetButtonMask() & IN_RELOAD)
+									if (hPlayer.GetButtonMask() & IN_ATTACK/* || hPlayer.GetButtonMask() & IN_RELOAD*/) //Need to fix check button IN_RELOAD
 									{
 										NetProps.SetPropInt(hPlayer, "m_afButtonForced", 0);
 										continue;
